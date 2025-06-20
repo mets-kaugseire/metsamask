@@ -3,9 +3,12 @@ Metsamaski arvutus kaugseire andmete alusel
 
 ## Install
 
+Installimine toimub järgmiste käskudega
+```
 conda create -n "metsamask" python=3.13 -y
 conda activate "metsamask"
 pip install -r req.txt
+```
 
 ## Andmetöötlus
 
