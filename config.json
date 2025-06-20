@@ -1,0 +1,8 @@
+{
+    "sentinel_zip_dir": "E:/S2_Data/L1C/",
+    "lidar_laz_dir": "I:/LAZ_DATA/",
+    "dtm_tif_dir": "G:/10_projektid/DTM_05m/",
+    "tile_output_dir": "F:/S2_tiles/",
+    "maakat_output_dir": "F:/S2_maakat",
+    "lidar_output_dir": "F:/S2_lidar"
+}
