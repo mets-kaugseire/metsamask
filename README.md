@@ -18,7 +18,10 @@ Näidis kataloogipuu:
  |  |- 51281
  |  |  |- 420382_2008_tava.laz
 
+
 Andmetöötlus toimub EPK10T ruutude kaupa ning seetõttu on sellesse alamkataloogi pandud kokku kõik laz failid. Andmetöötluse käigus ei arvutata eraldi välja maapinna mudelit, selleks kasutatakse Maa- ja Ruumiameti poolt arvutatud 5 m maapinna kõrgusmudel: 
 
-Allalaadimise link https://geoportaal.maaamet.ee/est/ruumiandmed/korgusandmed/laadi-korgusandmed-alla-p614.html
+Nii lidari kui ka maapinna kõrguse mudeli saab alla laadida:
+
+https://geoportaal.maaamet.ee/est/ruumiandmed/korgusandmed/laadi-korgusandmed-alla-p614.html
 
