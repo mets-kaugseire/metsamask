@@ -14,7 +14,7 @@ pip install -r req.txt
 Config.json failis tuleb määrata "lidar_laz_dir". Selles kataloogis on eeldatud, et laz failid on paigutatud aastate kaupa kataloogidesse. 
 Näidis kataloogipuu:
 ```
-"lidar_laz_dir"|
+["lidar_laz_dir"]|
  |- 2008_tava
  |  |- 51281
  |  |  |- 420382_2008_tava.laz
