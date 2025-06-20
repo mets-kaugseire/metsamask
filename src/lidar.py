@@ -1,6 +1,8 @@
 import laspy
 import pandas
 import numpy as np
+import requests
+
 
 def read_las_file(file_path):
     """Read a LAS file and return its point data."""
@@ -29,4 +31,29 @@ def read_las_directory(file_dir):
                 point_data.append(data)
             except RuntimeError as e:
                 print(f"Error reading {file_name}: {e}")
-    return pandas.concat(point_data, ignore_index=True) if point_data else pandas.DataFrame()        
+    return pandas.concat(point_data, ignore_index=True) if point_data else pandas.DataFrame()
+
+def download_las_file(url, save_path):
+    """Download a LAS file from a URL and save it to the specified path."""
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an error for bad responses
+        with open(save_path, 'wb') as file:
+            file.write(response.content)
+        print(f"File downloaded and saved to {save_path}")
+    except requests.RequestException as e:
+        raise RuntimeError(f"Failed to download file: {e}") from e
+
+def create_laz_url_path(kaardiruut, andmetyyp):
+    params = {'lang_id': '1',
+              'plugin_act': 'otsing',
+              'kaardiruut': kaardiruut,
+              'andmetyyp': 'lidar_laz_' + andmetyyp,
+              'dl': '1',
+              'f': kaardiruut + '_' + andmetyyp + '.laz',
+              'no_cache': '6855405e8f958',
+              'page_id': '614'}
+
+    return f"https://geoportaal.maaamet.ee/index.php?{requests.compat.urlencode(params)}"
+
+
